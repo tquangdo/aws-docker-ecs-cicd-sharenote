@@ -23,3 +23,5 @@
 ```
 - access `localhost` on browser
 ![result](screenshots/result.png)
+- access DB by Workbench
+![wb](screenshots/wb.png)
