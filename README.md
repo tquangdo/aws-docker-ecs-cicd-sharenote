@@ -5,6 +5,8 @@
 ![Forks](https://img.shields.io/github/forks/tquangdo/aws-docker-mysql-sharenote?color=f05340)
 [![Report an issue](https://img.shields.io/badge/Support-Issues-green)](https://github.com/tquangdo/aws-docker-mysql-sharenote/issues/new)
 
+![detail](screenshots/detail.png)
+
 ## reference
 [awsstudygroup](https://000015.awsstudygroup.com/vi)
 
