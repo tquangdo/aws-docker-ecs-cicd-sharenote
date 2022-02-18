@@ -7,6 +7,7 @@
 
 ## run docker
 > don gian, chi la add URL endpoint of RDS vo Dockerfile roi chay localhost!!!
+---
 ![detail](screenshots/detail.png)
 1. ### note
     - docker tag name=`sharenote`
@@ -15,7 +16,8 @@
 1. ### AWS SG
     - name=`dtq-sharenote-sg`
     > ⚠️⚠️ IMPORTANT ⚠️⚠️: SG's inbound rule=Aurora MUST have source=`IPv4 of browser (Ex: MyIP, NOT VPC's IP!!!)`
-    ![sg](screenshots/sg.png)
+---
+![sg](screenshots/sg.png)
 1. ### AWS RDS (MySQL)
     - instance name=`dtq-sharenote-db-test`
     - db name=`DTQNoteDB`
@@ -34,7 +36,7 @@
 
 ## ECS
 1. ### note
-    - docker tag name=ECR name=`dtq-sharenote`
+    - docker tag name=ECR name=`dtq-sharenote` (map with `ECS/build.sh`)
 1. ### reference
     [awsstudygroup](https://000016.awsstudygroup.com/vi/)
 1. ### AWS Targetgroup
