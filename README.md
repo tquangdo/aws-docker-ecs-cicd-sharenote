@@ -28,13 +28,14 @@
     ./build.sh
     ```
     - access `localhost:8082` on browser
-    > `build.sh` => `docker run -p 8082:8080 sharenote`
-    > 8080 is default port of Tomcat
-    ![result](screenshots/result.png)
+    > `build.sh` => `docker run -p 8082:8080 sharenote` (`8080` is default port of Tomcat)
+---
+![result](screenshots/result.png)
     - access DB by Workbench
     ![wb](screenshots/wb.png)
 
 ## ECS
+![detail2](screenshots/detail2.png)
 1. ### note
     - docker tag name=ECR name=`dtq-sharenote` (map with `ECS/build.sh`)
 1. ### reference
@@ -59,9 +60,18 @@
     ![service_2](screenshots/service_2.png)
 
 ## CICD
+![detail3](screenshots/detail3.png)
 1. ### note
     - dowload this file `https://example-corp-storage.s3.amazonaws.com/deploy-artifact/demo-0.0.1-SNAPSHOT.jar` into folder `CICD`
     > `CICD/Dockerfile`: `ADD demo-0.0.1-SNAPSHOT.jar demo-0.0.1-SNAPSHOT.jar`
 1. ### reference
     [awsstudygroup](https://000017.awsstudygroup.com/vi)
-1. ### 
+1. ### CICD/buildspec.yaml
+    - need replace 2 variables:
+    ```yml
+    ...
+    - REPOSITORY_URI=<ECR_URI!!!>
+    ...
+    {"name":"<CONTAINER_NAME!!!>","imageUri":"%s"}
+    ```
+    - has output `imagedefinitions.json` for CodeDeploy
