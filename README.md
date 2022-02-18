@@ -20,6 +20,7 @@
 ![mysql](screenshots/mysql.png)
 
 ## run
+- in `Dockerfile` src code, we already added RDS endpoint
 ```shell
 ./build.sh
 ```
