@@ -19,7 +19,7 @@
 ---
 ![sg](screenshots/sg.png)
 1. ### AWS RDS (MySQL)
-    - instance name=`dtq-sharenote-db-test`
+    - instance name=`dtqinstancesharenote`
     - db name=`DTQNoteDB`
     ![mysql](screenshots/mysql.png)
 1. ### run
