@@ -36,10 +36,10 @@
 
 ## ECS
 ![detail2](screenshots/detail2.png)
-1. ### note
-    - docker tag name=ECR name=`dtq-sharenote` (map with `ECS/build.sh`)
 1. ### reference
     [awsstudygroup](https://000016.awsstudygroup.com/vi/)
+1. ### ECR
+    - ECR name=`dtq-sharenote`=docker tag name (map with `ECS/build.sh`)
 1. ### AWS Targetgroup
     - target type=`Instances`
     > ⚠️⚠️ IMPORTANT!!! ⚠️⚠️ different with type=`IP` of https://github.com/tquangdo/aws-ecr-ecs-fargate-alb-api#create-target-group
