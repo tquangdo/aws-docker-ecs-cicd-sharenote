@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-export AWS_REGION=ap-northeast-1
+export AWS_REGION=us-east-1
 export AWS_USERNAME=AWS
-export AWS_ECR_URL=<AWS_ACCID!!!>.dkr.ecr.ap-northeast-1.amazonaws.com/dtq-sharenote
+export AWS_ECR_URL=<AWS_ECR_URL!!!> # end with "/dtq-sharenote"
 
 echo "Building Share Note..."
 
