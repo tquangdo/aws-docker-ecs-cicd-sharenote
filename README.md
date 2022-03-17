@@ -49,6 +49,8 @@
 1. ### AWS ALB
     - listener port=`80`
     ![lb](screenshots/lb.png)
+    ---
+    ![alb_sg_tg](screenshots/alb_sg_tg.png)
 1. ### AWS ECS cluster
     ![cluster](screenshots/cluster.png)
 1. ### AWS ECS task definition
