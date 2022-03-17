@@ -1,9 +1,9 @@
-# aws-docker-cicd-sharenote 🐳
+# aws-docker-ecs-cicd-sharenote 🐳
 
-![Stars](https://img.shields.io/github/stars/tquangdo/aws-docker-cicd-sharenote?color=f05340)
-![Issues](https://img.shields.io/github/issues/tquangdo/aws-docker-cicd-sharenote?color=f05340)
-![Forks](https://img.shields.io/github/forks/tquangdo/aws-docker-cicd-sharenote?color=f05340)
-[![Report an issue](https://img.shields.io/badge/Support-Issues-green)](https://github.com/tquangdo/aws-docker-cicd-sharenote/issues/new)
+![Stars](https://img.shields.io/github/stars/tquangdo/aws-docker-ecs-cicd-sharenote?color=f05340)
+![Issues](https://img.shields.io/github/issues/tquangdo/aws-docker-ecs-cicd-sharenote?color=f05340)
+![Forks](https://img.shields.io/github/forks/tquangdo/aws-docker-ecs-cicd-sharenote?color=f05340)
+[![Report an issue](https://img.shields.io/badge/Support-Issues-green)](https://github.com/tquangdo/aws-docker-ecs-cicd-sharenote/issues/new)
 
 ## run docker
 > don gian, chi la add URL endpoint of RDS vo Dockerfile roi chay localhost!!!
@@ -42,6 +42,7 @@
     [awsstudygroup](https://000016.awsstudygroup.com/vi/)
 1. ### AWS Targetgroup
     - target type=`Instances`
+    > ⚠️⚠️ IMPORTANT!!! ⚠️⚠️ different with type=`IP` of https://github.com/tquangdo/aws-ecr-ecs-fargate-alb-api#create-target-group
     ![tg_type](screenshots/tg_type.png)
     - port=`8082`
     ![tg](screenshots/tg.png)
