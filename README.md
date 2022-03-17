@@ -39,28 +39,44 @@
 1. ### reference
     [awsstudygroup](https://000016.awsstudygroup.com/vi/)
 1. ### ECR
-    - ECR name=`dtq-sharenote`=docker tag name (map with `ECS/build.sh`)
+    - name=`dtq-sharenote`=docker tag name (map with `ECS/build.sh`)
+    > ⚠️⚠️ IMPORTANT ⚠️⚠️: when run `./ECS/build.sh`, need start "docker desktop app"
 1. ### AWS Targetgroup
-    - target type=`Instances`
-    > ⚠️⚠️ IMPORTANT!!! ⚠️⚠️ different with type=`IP` of https://github.com/tquangdo/aws-ecr-ecs-fargate-alb-api#create-target-group
+    - name=`DTQTGSharenote`
+    - target type=`Instances` (due to launch type=`EC2`)
+    > ⚠️⚠️ IMPORTANT!!! ⚠️⚠️ different with type=`IP` (launch type=`Fargate`) of https://github.com/tquangdo/aws-ecr-ecs-fargate-alb-api#create-target-group
+    
     ![tg_type](screenshots/tg_type.png)
     - port=`8082`
     ![tg](screenshots/tg.png)
 1. ### AWS ALB
+    - name=`DTQLBSharenote`
     - listener port=`80`
     ![lb](screenshots/lb.png)
     ---
     ![alb_sg_tg](screenshots/alb_sg_tg.png)
 1. ### AWS ECS cluster
-    ![cluster](screenshots/cluster.png)
+    - name=`DTQECSClusterSharenote`
+    - ![cluster](screenshots/cluster.png)
 1. ### AWS ECS task definition
+    - type=`EC2` (NOT `fargate`)
+    - name=`DTQTaskDefSharenote`
     - add container with mapping port=`8082`
     ![taskdef_con](screenshots/taskdef_con.png)
 1. ### AWS ECS service
+    - type=`EC2` (NOT `fargate`)
+    - name=`DTQECSServiceSharenote`
     - container to LB: prodcution listener port=`80:HTTP`
-    ![service_1](screenshots/service_1.png)
+    - if target type=`IP` (launch type=`EC2`), will NOT show target group=`DTQTGSharenote`
+    ![note0317](screenshots/note0317.png)
     - last review
     ![service_2](screenshots/service_2.png)
+    - chọn vào tên của task và chọn tab Logs để kiểm tra log của task đó. Bạn sẽ thấy được log của task rất giống với log của EC2 instance hay máy tính của bạn khi deploy ShareNote
+    ![task_log](screenshots/task_log.png)
+1. ### run result
+    - access ALB DNS on browser
+    - 💣💣!!! ERR: `503 Service Temporarily Unavailable`
+    ![err](screenshots/err.png)
 
 ## CICD
 ![detail3](screenshots/detail3.png)
