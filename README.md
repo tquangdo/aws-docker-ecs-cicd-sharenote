@@ -15,7 +15,11 @@
     [awsstudygroup](https://000015.awsstudygroup.com/vi)
 1. ### AWS SG
     - name=`dtq-sharenote-sg`
-    > ⚠️⚠️ IMPORTANT ⚠️⚠️: SG's inbound rule=Aurora MUST have source=`IPv4 of browser (Ex: MyIP, NOT VPC's IP!!!)`
+    > ⚠️⚠️ IMPORTANT ⚠️⚠️: SG's inbound rule=
+    
+    > a/ Aurora MUST have source=`IPv4 of browser (Ex: MyIP, NOT VPC's IP!!!)`
+    
+    > b/ Custom TCP port=8082 (NOT 8080!!!)
 ---
 ![sg](screenshots/sg.png)
 1. ### AWS RDS (MySQL)
@@ -75,8 +79,7 @@
     ![task_log](screenshots/task_log.png)
 1. ### run result
     - access ALB DNS on browser
-    - 💣💣!!! ERR: `503 Service Temporarily Unavailable`
-    ![err](screenshots/err.png)
+    - If ERR: `503 Service Temporarily Unavailable` -> check ECS task logs & check SG about `8082`
 
 ## CICD
 ![detail3](screenshots/detail3.png)
