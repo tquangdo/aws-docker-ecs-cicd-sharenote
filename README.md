@@ -94,3 +94,25 @@
     {"name":"<CONTAINER_NAME!!!>","imageUri":"%s"}
     ```
     - has output `imagedefinitions.json` for CodeDeploy
+
+## [ReactJSApp] folder
+![reactjsapp](screenshots/reactjsapp.png)
+1. ### reference
+    [viblo](https://viblo.asia/p/aws-deploy-reactjs-app-tren-ecs-tich-hop-ci-cd-codecommit-codebuild-codepipeline-Qbq5QDemlD8)
+1. ### note
+    - ECS task just show tasks when deploy stage in CICD is successful! -> can NOT access ALB's DNS in browser until finish deploy stage
+1. ### ERR!!!💣💣💣
+    ```shell
+    [Container] 2022/03/22 11:45:49 Command did not exit successfully docker push $REPOSITORY_URI:latest exit status 1
+    [Container] 2022/03/22 11:45:49 Phase complete: POST_BUILD State: FAILED
+    [Container] 2022/03/22 11:45:49 Phase context status code: COMMAND_EXECUTION_ERROR Message: Error while executing command: docker push $REPOSITORY_URI:latest. Reason: exit status 1
+    [Container] 2022/03/22 11:45:49 Expanding base directory path: .
+    [Container] 2022/03/22 11:45:49 Assembling file list
+    [Container] 2022/03/22 11:45:49 Expanding .
+    [Container] 2022/03/22 11:45:49 Expanding file paths for base directory .
+    [Container] 2022/03/22 11:45:49 Assembling file list
+    [Container] 2022/03/22 11:45:49 Expanding imagedefinitions.json
+    [Container] 2022/03/22 11:45:49 Skipping invalid file path imagedefinitions.json
+    [Container] 2022/03/22 11:45:49 Phase complete: UPLOAD_ARTIFACTS State: FAILED
+    [Container] 2022/03/22 11:45:49 Phase context status code: CLIENT_ERROR Message: no matching artifact paths found
+    ```    
