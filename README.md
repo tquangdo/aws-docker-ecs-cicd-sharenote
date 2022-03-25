@@ -82,7 +82,8 @@
     - If ERR: `503 Service Temporarily Unavailable` -> check ECS task logs & check SG about `8082`
 
 ## CICD
-![detail3](screenshots/detail3.png)
+![fix1](screenshots/fix1.png)
+[cicd](https://docs.google.com/spreadsheets/d/1m8LuBQUzqIQ0bJYb3NJZOT4iSb78xUEG/edit#gid=1878281573&range=B11)
 1. ### note
     - dowload this file `https://example-corp-storage.s3.amazonaws.com/deploy-artifact/demo-0.0.1-SNAPSHOT.jar` into folder `CICD`
     > `CICD/Dockerfile`: `ADD demo-0.0.1-SNAPSHOT.jar demo-0.0.1-SNAPSHOT.jar`
@@ -99,7 +100,8 @@
     - has output `imagedefinitions.json` for CodeDeploy
 
 ## [ReactJSApp] folder
-![reactjsapp](screenshots/reactjsapp.png)
+![fix2](screenshots/fix2.png)
+[cicd](https://docs.google.com/spreadsheets/d/1m8LuBQUzqIQ0bJYb3NJZOT4iSb78xUEG/edit#gid=1878281573&range=B11)
 1. ### reference
     [viblo](https://viblo.asia/p/aws-deploy-reactjs-app-tren-ecs-tich-hop-ci-cd-codecommit-codebuild-codepipeline-Qbq5QDemlD8)
 1. ### note
